@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cyprian Store</title>
+
+    <link rel="stylesheet" href="Index.css">
+</head>
+
+<body>
+
+<header>
+    <div class="header-content">
+        <h2>Cyprian Store</h2>
+
+        <button onclick="scrollToOrder()">
+            🛒 Order (<span id="cartCount">0</span>)
+        </button>
+    </div>
+</header>
+
+<main>
+
+    <section class="hero">
+        <h1>Welcome to Cyprian Store</h1>
+
+        <p>
+            Choose what you want, add it to your order,
+            and send your details. Simple online ordering.
+        </p>
+    </section>
+
+
+    <h2 class="section-title">Our Products</h2>
+
+    <section class="products" id="products">
+        <!-- Products will appear here -->
+    </section>
+
+
+    <section class="order-box" id="order">
+
+        <h2>Your Order</h2>
+
+        <div id="cart">
+            <p class="empty">
+                Your order is empty.
+                Add a product above.
+            </p>
+        </div>
+
+        <div class="total">
+            <span>Total</span>
+            <span id="total">₦0</span>
+        </div>
+
+
+        <h2>Customer Details</h2>
+
+        <form id="orderForm">
+
+            <label>Full Name</label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                required
+            >
+
+
+            <label>Phone Number</label>
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="0800 000 0000"
+                required
+            >
+
+
+            <label>Delivery Address</label>
+
+            <textarea
+                id="address"
+                placeholder="Enter your delivery address"
+                required
+            ></textarea>
+
+
+            <label>Payment Method</label>
+
+            <select id="payment">
+
+                <option>Bank Transfer</option>
+
+                <option>Cash on Delivery</option>
+
+            </select>
+
+
+            <label>Extra Note</label>
+
+            <textarea
+                id="notes"
+                placeholder="Colour, size, etc."
+            ></textarea>
+
+
+            <button class="submit" type="submit">
+                Create My Order
+            </button>
+
+        </form>
+
+
+        <div class="confirmation" id="confirmation">
+
+            <h3>✅ Order Created!</h3>
+
+            <pre id="summary"></pre>
+
+            <button
+                class="copy"
+                onclick="copyOrder()"
+            >
+                Copy Order Details
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    Vendor Starter Kit
+
+</footer>
+
+
+<script src="Index.js"></script>
+
+</body>
+</html>
